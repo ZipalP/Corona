@@ -161,7 +161,8 @@ header{
     overflow: hidden;
     
     .corona-latest{
-        padding-left: 0px;
+        padding: 0px;
+        margin-bottom: 10px;
 
         img{
             max-width: 100%;
@@ -391,8 +392,98 @@ header{
 /*sidebar*/
 
 .corona-sidebar{
+    padding-right: 0 !important;
+
     section{
         background-color: #fff;
         margin-bottom: 10px;
+    }
+
+    //search widget
+
+    .widget_search{
+        .screen-reader-text{
+            display: none;
+        }
+
+        label{
+            width: 80%;
+            margin: 0px !important;
+
+            input{
+                width: 100%;
+                border: 0;
+                background-color: $accent;
+                height: 35px;
+                color: #fff;
+                font-weight: 400;
+                padding-left: 10px;
+
+            }
+
+            input::-webkit-input-placeholder {
+                color: #fff;
+            }
+
+            input:-moz-placeholder {
+                color: #fff;
+            }
+
+            input::-moz-placeholder {
+                color: #fff;
+            }
+
+            input:-ms-input-placeholder {
+                color: #fff;
+            }
+
+        }
+        
+        .search-submit{
+            width: 20%;
+            float: right;
+            height: 35px;
+            box-shadow: none;
+            border: none;
+            background-color: $accentAlt;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            transition: 0.1s all ease-in-out;
+
+            &:hover{
+                background-color: $accentAlt * 0.8;
+            }
+        }
+    }
+
+    //recent posts, comments, archives, comments, login
+    .widget_recent_entries, .widget_recent_comments, .widget_archive, .widget_categories, .widget_meta{
+
+        .title{
+            margin-bottom: 0px;
+        }
+
+        ul{
+            padding: 0px;
+            list-style-type: none;
+
+            li{
+                padding: 10px;
+                margin: 0px;
+                border-bottom: 1px solid #ccc;
+                transition: 0.1s all ease-in-out;
+
+                a{
+                    text-decoration: none;
+                    display: block;
+                }
+
+                &:hover{
+                    background-color: #ddd;
+                }
+            }
+        }
     }
 }

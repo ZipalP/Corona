@@ -113,7 +113,8 @@ header {
   display: block;
   overflow: hidden; }
   .corona-main .corona-latest {
-    padding-left: 0px; }
+    padding: 0px;
+    margin-bottom: 10px; }
     .corona-main .corona-latest img {
       max-width: 100%;
       height: auto; }
@@ -252,6 +253,58 @@ header {
     margin: 0 12px !important; } }
 
 /*sidebar*/
-.corona-sidebar section {
-  background-color: #fff;
-  margin-bottom: 10px; }
+.corona-sidebar {
+  padding-right: 0 !important; }
+  .corona-sidebar section {
+    background-color: #fff;
+    margin-bottom: 10px; }
+  .corona-sidebar .widget_search .screen-reader-text {
+    display: none; }
+  .corona-sidebar .widget_search label {
+    width: 80%;
+    margin: 0px !important; }
+    .corona-sidebar .widget_search label input {
+      width: 100%;
+      border: 0;
+      background-color: #0078D7;
+      height: 35px;
+      color: #fff;
+      font-weight: 400;
+      padding-left: 10px; }
+    .corona-sidebar .widget_search label input::-webkit-input-placeholder {
+      color: #fff; }
+    .corona-sidebar .widget_search label input:-moz-placeholder {
+      color: #fff; }
+    .corona-sidebar .widget_search label input::-moz-placeholder {
+      color: #fff; }
+    .corona-sidebar .widget_search label input:-ms-input-placeholder {
+      color: #fff; }
+  .corona-sidebar .widget_search .search-submit {
+    width: 20%;
+    float: right;
+    height: 35px;
+    box-shadow: none;
+    border: none;
+    background-color: #005497;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: 0.1s all ease-in-out; }
+    .corona-sidebar .widget_search .search-submit:hover {
+      background-color: #004378; }
+  .corona-sidebar .widget_recent_entries .title, .corona-sidebar .widget_recent_comments .title, .corona-sidebar .widget_archive .title, .corona-sidebar .widget_categories .title, .corona-sidebar .widget_meta .title {
+    margin-bottom: 0px; }
+  .corona-sidebar .widget_recent_entries ul, .corona-sidebar .widget_recent_comments ul, .corona-sidebar .widget_archive ul, .corona-sidebar .widget_categories ul, .corona-sidebar .widget_meta ul {
+    padding: 0px;
+    list-style-type: none; }
+    .corona-sidebar .widget_recent_entries ul li, .corona-sidebar .widget_recent_comments ul li, .corona-sidebar .widget_archive ul li, .corona-sidebar .widget_categories ul li, .corona-sidebar .widget_meta ul li {
+      padding: 10px;
+      margin: 0px;
+      border-bottom: 1px solid #ccc;
+      transition: 0.1s all ease-in-out; }
+      .corona-sidebar .widget_recent_entries ul li a, .corona-sidebar .widget_recent_comments ul li a, .corona-sidebar .widget_archive ul li a, .corona-sidebar .widget_categories ul li a, .corona-sidebar .widget_meta ul li a {
+        text-decoration: none;
+        display: block; }
+      .corona-sidebar .widget_recent_entries ul li:hover, .corona-sidebar .widget_recent_comments ul li:hover, .corona-sidebar .widget_archive ul li:hover, .corona-sidebar .widget_categories ul li:hover, .corona-sidebar .widget_meta ul li:hover {
+        background-color: #ddd; }
