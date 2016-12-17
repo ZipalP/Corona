@@ -19,15 +19,15 @@ body {
   background-color: #e9eaed !important; }
 
 /* Navigation stuff */
-header {
+.site-header {
   margin-bottom: 10px;
   height: 50px; }
-  header .navbar {
+  .site-header .navbar {
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s; }
-    header .navbar .navbar-brand {
+    .site-header .navbar .navbar-brand {
       height: 50px !important;
       line-height: 50px;
       padding: 0px;
@@ -35,42 +35,42 @@ header {
       font-weight: 400;
       letter-spacing: 0.3px;
       font-size: 20px; }
-    header .navbar .icon-bar {
+    .site-header .navbar .icon-bar {
       background-color: #fff !important; }
-    header .navbar .navbar-collapse {
+    .site-header .navbar .navbar-collapse {
       overflow: hidden;
       max-height: none !important; }
-    header .navbar .logo {
+    .site-header .navbar .logo {
       max-height: 35px;
       width: auto;
       display: block;
       margin-top: 6px; }
   @media (max-width: 768px) {
-    header .navbar-toggle {
+    .site-header .navbar-toggle {
       padding-left: 0px !important; }
-    header .navbar-local.theme-dark .navbar-nav .open > a {
+    .site-header .navbar-local.theme-dark .navbar-nav .open > a {
       background-color: transparent !important;
       opacity: 0.7; }
-    header .navbar li a {
+    .site-header .navbar li a {
       padding-left: 0px !important; }
-      header .navbar li a:hover {
+      .site-header .navbar li a:hover {
         opacity: 0.7;
         background-color: transparent !important; }
-    header .navbar li:hover {
+    .site-header .navbar li:hover {
       background-color: transparent !important; }
-    header .open .dropdown-menu {
+    .site-header .open .dropdown-menu {
       display: block;
       position: absolute !important;
       width: 100% !important; }
-      header .open .dropdown-menu li {
+      .site-header .open .dropdown-menu li {
         padding-left: 10px; } }
-  header li {
+  .site-header li {
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 0.3px;
     font-size: 16px;
     height: 50px; }
-    header li a {
+    .site-header li a {
       padding: 0 20px !important;
       display: block !important;
       overflow: hidden;
@@ -245,7 +245,7 @@ header {
     opacity: 0.5; }
 
 @media (max-width: 500px) {
-  .page-template-page-home header {
+  .page-template-page-home .site-header {
     margin-bottom: 0px; }
   .page-template-page-home .latest-block .container {
     margin: 0px !important; }
@@ -308,3 +308,45 @@ header {
         display: block; }
       .corona-sidebar .widget_recent_entries ul li:hover, .corona-sidebar .widget_recent_comments ul li:hover, .corona-sidebar .widget_archive ul li:hover, .corona-sidebar .widget_categories ul li:hover, .corona-sidebar .widget_meta ul li:hover {
         background-color: #ddd; }
+
+/* Single Posts */
+.single-post-block {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+  .single-post-block .col-md-16 {
+    margin: 0px;
+    padding: 0px; }
+  .single-post-block article {
+    background-color: #fff; }
+    .single-post-block article img {
+      max-width: 100%;
+      height: auto; }
+    .single-post-block article header {
+      background-color: #0078D7;
+      margin-bottom: 20px;
+      padding: 20px; }
+      .single-post-block article header h1 {
+        font-size: 30px;
+        margin: 0px;
+        color: #fff;
+        padding: 0px;
+        line-height: 40px; }
+      .single-post-block article header p {
+        color: #fff;
+        padding: 0px;
+        margin: 0px;
+        opacity: 0.7; }
+      .single-post-block article header a {
+        color: #fff;
+        text-decoration: none; }
+        .single-post-block article header a:hover {
+          color: #ccc; }
+      .single-post-block article header span {
+        float: right; }
+    .single-post-block article p {
+      padding: 0 20px;
+      margin-bottom: 10px;
+      font-size: 17px;
+      line-height: 33px; }

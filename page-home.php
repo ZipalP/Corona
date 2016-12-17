@@ -71,7 +71,7 @@ get_header(); ?>
                                                 <div class="meta">
                                                     <div class="sub">
                                                         <a title="<?php echo $title; ?>" href="<?php echo $perma; ?>"><h2><?php echo $title; ?></h2></a>
-                                                        <p class="info"><a title="<?php echo 'Read more articles by ' . $author; ?>" href="<?php echo $authorURL ?>">by <?php echo $author; ?></a>, <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ); ?> ago</p>
+                                                        <p class="info"><a title="<?php echo 'Read other articles by ' . $author; ?>" href="<?php echo $authorURL ?>">by <?php echo $author; ?></a>, <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ); ?> ago</p>
                                                     </div>
                                                     <p><?php echo corona_excerpt(200); ?></p>
                                                 </div>

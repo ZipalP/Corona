@@ -27,7 +27,7 @@ body{
 
 /* Navigation stuff */
 
-header{
+.site-header{
     margin-bottom: 10px;
     height: 50px;
     
@@ -374,7 +374,7 @@ header{
 
 @media (max-width: 500px){
     .page-template-page-home{
-        header{
+        .site-header{
             margin-bottom: 0px;
         }
 
@@ -485,5 +485,71 @@ header{
                 }
             }
         }
+    }
+}
+
+
+/* Single Posts */
+
+.single-post-block{
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .col-md-16{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    article{
+        background-color: #fff;
+
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+
+        header{
+            background-color: $accent;
+            margin-bottom: 20px;
+            padding: 20px;
+
+            h1{
+                font-size: 30px;
+                margin: 0px;
+                color: #fff;
+                padding: 0px;
+                line-height: 40px;
+            }
+
+            p{
+                color: #fff;
+                padding: 0px;
+                margin: 0px;
+                opacity: 0.7;
+            }
+
+            a{
+                color: #fff;
+                text-decoration: none;
+
+                &:hover{
+                    color: #ccc;
+                }
+            }
+
+            span{
+                float: right;
+            }
+        }
+
+        p{
+            padding: 0 20px;
+            margin-bottom: 10px;
+            font-size: 17px;
+            line-height: 33px;
+        }
+        
     }
 }

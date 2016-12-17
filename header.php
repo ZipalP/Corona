@@ -22,6 +22,6 @@
 <body <?php body_class(); ?>>
 	<div class="overlay fadein"></div>
 	<div id="page" class="site">
-		<header>
+		<header class="site-header">
 			<?php echo corona_get_nav("primary"); ?>
 		</header>
