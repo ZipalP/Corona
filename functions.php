@@ -128,7 +128,7 @@ function corona_excerpt($limit) {
 function corona_get_nav( $theme_location ) {
     if ( ($theme_location) && ($locations = get_nav_menu_locations()) && isset($locations[$theme_location]) ) {
          
-        $menu_list  = '<nav class="navbar navbar-default">' ."\n";
+        $menu_list  = '<nav class="navbar navbar-fixed-top navbar-default">' ."\n";
 		$menu_list .= '<div class="navbar-local color-accent theme-dark">' ."\n";
         $menu_list .= '<div class="container">' ."\n";
         $menu_list .= '<div class="navbar-header">' ."\n";
