@@ -4,7 +4,8 @@ jQuery(document).ready(function($) {
        var st = $(this).scrollTop();
            
         if (st > 550){
-            $(".navbar").css('top', '-50px'); 
+            $(".navbar").css('top', '-50px');
+            $(".navbar-collapse").removeClass("in"); 
         } else{
             $(".navbar").css('top', '0px');
         }
@@ -19,5 +20,13 @@ jQuery(document).ready(function($) {
             $(".navbar").css('top', '0px');
         }
     })   
+    
+    $(".navbar-toggle").click(function(){
+        $("body").toggleClass("overlay-activated");
+    })
+
+    $(".overlay").click(function(){
+        $(".navbar-toggle").click();
+    })
 
 });

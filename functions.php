@@ -132,7 +132,7 @@ function corona_get_nav( $theme_location ) {
 		$menu_list .= '<div class="navbar-local color-accent theme-dark">' ."\n";
         $menu_list .= '<div class="container">' ."\n";
         $menu_list .= '<div class="navbar-header">' ."\n";
-        $menu_list .= '<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">' ."\n";
+        $menu_list .= '<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#corona-nav" aria-expanded="false">' ."\n";
         $menu_list .= '<span class="sr-only">Toggle navigation</span>' ."\n";
         $menu_list .= '<span class="icon-bar"></span>' ."\n";
         $menu_list .= '<span class="icon-bar"></span>' ."\n";
@@ -145,7 +145,7 @@ function corona_get_nav( $theme_location ) {
         $menu = get_term( $locations[$theme_location], 'nav_menu' );
         $menu_items = wp_get_nav_menu_items($menu->term_id);
  
-        $menu_list .= '<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">' ."\n";
+        $menu_list .= '<div class="collapse navbar-collapse" id="corona-nav">' ."\n";
         $menu_list .= '<ul class="nav navbar-nav navbar-right">' ."\n";
           
         foreach( $menu_items as $menu_item ) {
