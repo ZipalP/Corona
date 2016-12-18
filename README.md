@@ -6,9 +6,8 @@ Corona is a simple WordPress theme, inspired by Windows 10s MDL2 design language
 
 ### Getting Started
 
-* Clone this repo
-* Package the files into a .zip
-* Upload it to your WordPress theme
+* [Download the latest release from here](https://github.com/MehediH/Corona/releases)
+* Upload it to your WordPress dashboard
 * Once the theme is installed and activated, create a page and use the template "Homepage" for that page
 * Go to the Customization section on the WordPress dashboard and set that page as teh static front page
 
@@ -28,7 +27,7 @@ From the Corona Settings page in WordPress Customization dashboard, you can set 
 
 ### SASS
 
-Corona is built on SASS and you can easily change the accent if you want. Simply modify the `$accent` variable on `style.scss` and compile it using a SASS compiler. If you have Visual Studio Code, you can simply use `gulp` and `gulp-sass` to compile hte SASS file (`npm install gulp` and `npm install gulp-sass`, then do `CTRL+SHIFT+B` everytime you want to compile the file.
+Corona is built on SASS and you can easily change the accent if you want. Clone the repo, then simply modify the `$accent` variable on `style.scss` and compile it using a SASS compiler. If you have Visual Studio Code, you can simply use `gulp` and `gulp-sass` to compile hte SASS file (`npm install gulp` and `npm install gulp-sass`, then do `CTRL+SHIFT+B` everytime you want to compile the file.
 
 
 ### Stuff used to make this:
