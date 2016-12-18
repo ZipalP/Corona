@@ -18,6 +18,9 @@ Tags: Windows 10, Windows, MDL, MDL2, Metro, WindowS Phone
 body {
   background-color: #e9eaed !important; }
 
+main {
+  padding: 0px !important; }
+
 /* Navigation stuff */
 .site-header {
   margin-bottom: 10px;
@@ -501,3 +504,34 @@ body {
 .corona-normal-page .inner {
   background-color: #fff;
   padding: 10px; }
+
+footer {
+  background-color: #0078D7;
+  height: 50px;
+  color: #fff; }
+  footer .container {
+    padding: 0px;
+    width: auto; }
+  footer p {
+    line-height: 50px;
+    padding: 0px;
+    margin: 0px;
+    float: left; }
+  footer a {
+    line-height: 50px;
+    padding: 0px;
+    margin: 0px;
+    float: right;
+    color: #fff;
+    opacity: 0.7; }
+    footer a:hover {
+      opacity: 1;
+      color: #fff;
+      text-decoration: none; }
+  @media (max-width: 600px) {
+    footer a {
+      display: none; }
+    footer p {
+      float: none;
+      width: 100%;
+      text-align: center; } }

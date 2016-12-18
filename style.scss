@@ -25,6 +25,9 @@ body{
     background-color: #e9eaed !important;
 }
 
+main{
+    padding: 0px !important;
+}
 
 /* Navigation stuff */
 
@@ -785,5 +788,52 @@ body{
     .inner{
         background-color: #fff;
         padding: 10px;
+    }
+}
+
+// footer
+
+footer{
+    background-color: $accent;
+    height: 50px;
+    color: #fff;
+
+    .container{
+        padding: 0px;
+        width: auto;
+    }
+
+    p{
+        line-height: 50px;
+        padding: 0px;
+        margin: 0px;
+        float: left;
+    }
+
+    a{
+        line-height: 50px;
+        padding: 0px;
+        margin: 0px;
+        float: right;
+        color: #fff;
+        opacity: 0.7;
+
+        &:hover{
+            opacity: 1;
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    @media (max-width: 600px){
+        a{
+            display: none;
+        }
+
+        p{
+            float: none;
+            width: 100%;
+            text-align: center;
+        }
     }
 }

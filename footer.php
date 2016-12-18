@@ -13,11 +13,10 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'corona' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'corona' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'corona' ), 'corona', '<a href="https://github.com/MehediH" rel="designer">Mehedi Hassan</a>' ); ?>
+	<footer id="colophon" class="theme-dark site-footer" role="contentinfo">
+		<div class="container">
+			<p>© <?php echo date("Y") . ' ' . get_bloginfo("name"); ?></p>
+			<a href="https://twitter.com/MehediH_" rel="designer">Designed and developed by Mehedi Hassan</a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
