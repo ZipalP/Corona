@@ -129,7 +129,7 @@ body{
     height: 100%;
     position: absolute;
     top: 0;
-    opacity: 0.8;
+    opacity: 0.4;
     display: none;
     z-index: 99;
 }
@@ -145,18 +145,21 @@ body{
 
 /* Homepage */
 
-.title{
+.title, .gallerify-block-title{
     background-color: $accent;
     border-bottom: 4px solid $accentAlt;
     height: 40px;
     line-height: 40px;
     text-transform: uppercase;
     color: #fff;
-    padding-left: 10px;
-    margin-bottom: 10px;
+    padding-left: 10px !important;
+    margin-bottom: 10px !important;
     font-size: 17px;
     font-weight: 500;
     letter-spacing: 0.3px;
+    padding: 0px;
+    margin: 0px;
+
 
     span{
         float: right;
@@ -528,6 +531,18 @@ body{
             height: auto;
         }
 
+        .gallerify-block-title{
+            margin-bottom: 0px !important;
+        }
+
+        .gallerify-container{
+            margin-bottom: 10px;
+        }
+
+        .sharify-container{
+            padding: 10px 0 !important;
+        }
+
         header{
             background-color: $accent;
             margin-bottom: 20px;
@@ -752,4 +767,23 @@ body{
         }
     }
     
+}
+
+//archive
+@media (max-width: 767px){
+    .archive .corona-sidebar, .single .corona-sidebar, .page .corona-sidebar{
+        padding-left: 0px !important;
+    }
+}
+
+.corona-normal-page{
+    
+    .title{
+        margin-bottom: 0;
+    }
+
+    .inner{
+        background-color: #fff;
+        padding: 10px;
+    }
 }

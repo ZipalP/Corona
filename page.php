@@ -16,17 +16,25 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
-			<?php
-			while ( have_posts() ) : the_post();
-
-				
-			endwhile; // End of the loop.
-			?>
-
+			<!--Main Block-->
+			<div class="corona-main">
+                <div class="container">
+                    <div class="corona-latest col-md-16">
+                        <div class="corona-normal-page">
+                            <?php
+								while ( have_posts() ) : the_post();
+									echo '<div class="title">' . get_the_title() . '</div>';
+									echo '<div class="inner">' . get_the_content() . '</div>';
+								endwhile; // End of the loop.
+							?>
+                        </div>
+                    </div>
+                    <div class="corona-sidebar col-md-8">
+                        <?php echo get_sidebar(); ?>
+                    </div>
+                </div>
+            </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
 <?php
-get_sidebar();
 get_footer();
