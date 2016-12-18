@@ -105,6 +105,10 @@ body {
   font-size: 17px;
   font-weight: 500;
   letter-spacing: 0.3px; }
+  .title span {
+    float: right;
+    opacity: 0.7;
+    padding-right: 10px; }
 
 .corona-main {
   width: 100%;
@@ -319,7 +323,8 @@ body {
     margin: 0px;
     padding: 0px; }
   .single-post-block article {
-    background-color: #fff; }
+    background-color: #fff;
+    padding-bottom: 10px; }
     .single-post-block article img {
       max-width: 100%;
       height: auto; }
@@ -337,7 +342,8 @@ body {
         color: #fff;
         padding: 0px;
         margin: 0px;
-        opacity: 0.7; }
+        opacity: 0.7;
+        margin-top: 5px; }
       .single-post-block article header a {
         color: #fff;
         text-decoration: none; }
@@ -346,7 +352,76 @@ body {
       .single-post-block article header span {
         float: right; }
     .single-post-block article p {
-      padding: 0 20px;
       margin-bottom: 10px;
       font-size: 17px;
-      line-height: 33px; }
+      line-height: 33px;
+      padding: 0px; }
+    .single-post-block article .post-container {
+      padding: 0 20px; }
+    .single-post-block article blockquote {
+      margin: 0px;
+      padding: 15px;
+      margin-bottom: 10px;
+      background-color: #e9eaed; }
+    .single-post-block article .embed-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%; }
+    .single-post-block article .embed-container iframe, .single-post-block article .embed-container object, .single-post-block article .embed-container embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+    .single-post-block article .twitter-tweet {
+      margin: 0 auto !important; }
+  .single-post-block .comments-area {
+    background-color: #fff;
+    margin: 10px 0; }
+    .single-post-block .comments-area .comment-list {
+      padding: 0px;
+      list-style-type: none; }
+      .single-post-block .comments-area .comment-list li {
+        padding: 10px;
+        margin: 0px;
+        border-bottom: 1px solid #ccc;
+        transition: 0.1s all ease-in-out; }
+        .single-post-block .comments-area .comment-list li a {
+          text-decoration: none;
+          display: block; }
+        .single-post-block .comments-area .comment-list li article {
+          margin: 0px !important;
+          padding: 0px !important; }
+          .single-post-block .comments-area .comment-list li article p {
+            margin: 0px !important;
+            padding: 0px !important; }
+        .single-post-block .comments-area .comment-list li .author img {
+          border-radius: 50%;
+          width: 35px;
+          float: left;
+          margin-right: 15px; }
+        .single-post-block .comments-area .comment-list li .author .comment-meta span {
+          display: block;
+          font-size: 18px; }
+        .single-post-block .comments-area .comment-list li .author .comment-meta time {
+          font-size: 15px;
+          opacity: 0.7; }
+        .single-post-block .comments-area .comment-list li .author .comment-meta .reply {
+          float: right;
+          text-transform: uppercase;
+          font-size: 16px;
+          font-weight: 600;
+          opacity: 0.7;
+          transition: 0.1s all ease-in-out; }
+          .single-post-block .comments-area .comment-list li .author .comment-meta .reply:hover {
+            opacity: 1; }
+      .single-post-block .comments-area .comment-list .children {
+        list-style: none; }
+        .single-post-block .comments-area .comment-list .children article {
+          background-color: #e9eaed; }
+        .single-post-block .comments-area .comment-list .children li {
+          border: 0 !important;
+          background-color: #e9eaed;
+          margin: 10px; }

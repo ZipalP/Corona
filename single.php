@@ -27,7 +27,7 @@ get_header(); ?>
 										<h1><?php echo get_the_title(); ?></h1>
 										<p><a title="<?php echo 'Read other articles by ' . $author; ?>" href="<?php echo $authorURL ?>">by <?php echo $author; ?></a><span><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ); ?> ago</span></p>
 									</header>
-									<p><?php the_content(); ?></p>
+									<div class="post-container"><?php the_content(); ?></div>
 								</article>
 							<?php 
 								// If comments are open or we have at least one comment, load up the comment template.

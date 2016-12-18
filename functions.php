@@ -434,3 +434,41 @@ function corona_featured_section(){
 
 	echo "</div>";
 }
+
+function corona_comments( $comment, $args, $depth ){
+    $GLOBALS['comment'] = $comment;
+    switch( $comment->comment_type ) :
+        case 'pingback' :
+        case 'trackback' : 
+        break;
+
+        default : ?>
+            <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+                <article <?php comment_class(); ?> class="comment">
+                    <div class="comment-body">
+                        <div class="author">
+                            <?php echo get_avatar( $comment, 72 ); ?>
+                            
+                            <div class="comment-meta">
+                                <span><?php comment_author(); ?>
+                                    <div class="reply">
+                                        <?php 
+                                            comment_reply_link( array_merge( $args, array( 
+                                            'reply_text' => 'Reply',
+                                            'depth' => $depth,
+                                            'max_depth' => $args['max_depth'] 
+                                            ) ) );
+                                        ?>
+                                    </div>
+                                </span>
+                                <time <?php comment_time( 'c' ); ?>>Posted on <?php comment_date(); ?> at <?php comment_time(); ?></time>
+                            </div>
+                        </div>
+                        <?php comment_text(); ?>
+                    </div>  
+                </article>
+            </li>
+        <?php 
+        break;
+    endswitch;
+}
