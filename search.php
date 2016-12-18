@@ -9,40 +9,46 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<!--Main Block-->
+			<div class="corona-main latest-block">
+                <div class="container">
+                    <div class="corona-latest col-md-16">
+                        
+                        <div class="corona-article-list">
+                            <?php
+							
+								echo '<div class="title">Search results for: '.get_search_query().'</div>'; 
 
-		<?php
-		if ( have_posts() ) : ?>
+								if ( have_posts() ) : ?>
+								
+									<?php while ( have_posts() ) : the_post(); ?>
+ 									
+									 <?php get_template_part( 'inc/modules/article', 'loop' ); ?>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'corona' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+								<?php endwhile; ?>
+										<nav class="corona-loop-nav">
+                                            <div class="btn-left"><?php echo get_next_posts_link( 'Older Articles', $latest->max_num_pages ); // display older posts link ?></div>
+                                            <div class="btn-right"><?php echo get_previous_posts_link( 'Newer Articles'); // display newer posts link ?></div>
+                                        </nav>
+								<?php else :
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+									get_template_part( 'inc/modules/article', 'missing' );
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+								endif; 
+							?>
 
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
+                        </div>
+                    </div>
+                    <div class="corona-sidebar col-md-8">
+                        <?php echo get_sidebar(); ?>
+                    </div>
+                </div>
+            </div>
 		</main><!-- #main -->
-	</section><!-- #primary -->
-
+	</div><!-- #primary -->
 <?php
-get_sidebar();
 get_footer();
+
+

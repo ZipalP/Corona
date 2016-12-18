@@ -558,3 +558,13 @@ footer {
   @media (max-width: 800px) {
     .error404 img, .error404 .info {
       width: 100% !important; } }
+
+.not-found {
+  padding: 10px; }
+  .not-found h3 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.3px; }
