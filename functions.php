@@ -270,7 +270,7 @@ class theme_customizer
 
 		// Featured section
         $wp_manager->add_setting( 'corona_config_featured', array(
-            'default'        => '1',
+            'default'        => '0',
         ) );
 
         $wp_manager->add_control( 'corona_config_featured', array(
@@ -296,6 +296,18 @@ class theme_customizer
             'type'    => 'select',
             'choices' => $output,
             'priority' => 4
+        ) );
+        
+        //corona_comments
+        $wp_manager->add_setting( 'corona_config_comments', array(
+            'default'        => '0',
+        ) );
+
+        $wp_manager->add_control( 'corona_config_comments', array(
+            'label'   => 'Using Disqus comments?',
+            'section' => 'corona_custmzr_section',
+            'type'    => 'checkbox',
+            'priority' => 5
         ) );
     }
 

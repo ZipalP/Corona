@@ -29,14 +29,27 @@ get_header(); ?>
 									</header>
 									<div class="post-container"><?php the_content(); ?></div>
 								</article>
-							<?php 
-								// If comments are open or we have at least one comment, load up the comment template.
-								if ( comments_open() || get_comments_number() ) :
-									comments_template();
-								endif;
 
+
+							<?php 
+
+								if(get_theme_mod("corona_config_comments")){ ?>
+									<div id="comments" class="comments-area">
+										<div class="title">Comments</div>
+										<?php if ( comments_open() || get_comments_number() ) :
+											comments_template();
+										endif; ?>
+									</div>
+								<?php } else{
+									// If comments are open or we have at least one comment, load up the comment template.
+									if ( comments_open() || get_comments_number() ) :
+										comments_template();
+									endif;
+								}
+								
 							endwhile; // End of the loop.
 						?>
+
                     </div>
                     <div class="corona-sidebar col-md-8">
                         <?php echo get_sidebar(); ?>

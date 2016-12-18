@@ -23,9 +23,9 @@ get_header(); ?>
                         <div class="corona-normal-page">
                             <?php
 								while ( have_posts() ) : the_post();
-									echo '<div class="title">' . get_the_title() . '</div>';
-									echo '<div class="inner">' . get_the_content() . '</div>';
-								endwhile; // End of the loop.
+									echo '<div class="title">' . get_the_title() . '</div>'; ?>
+									<div class="inner"><?php the_content(); ?></div>
+								<?php endwhile; // End of the loop.
 							?>
                         </div>
                     </div>
