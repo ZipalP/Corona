@@ -29,6 +29,14 @@ main{
     padding: 0px !important;
 }
 
+a{
+    color: $accent;
+}
+
+.color-accent{
+    background: $accent !important;
+}
+
 /* Navigation stuff */
 
 .site-header{
@@ -49,6 +57,7 @@ main{
             font-weight: 400;
             letter-spacing: 0.3px;
             font-size: 20px; 
+            transition: 0.1s all ease-in-out;
 
             &:hover, &:focus, &:active{
                 color: #fff !important;
@@ -70,7 +79,14 @@ main{
             max-height: 35px;
             width: auto;
             display: block;
-            margin-top: 6px;
+            margin-top: 7px;
+            float: left;
+            margin-right: 10px;
+        }
+
+        span{
+            font-weight: 600;
+            letter-spacing: 0.3px;
         }
     }
 

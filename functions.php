@@ -140,7 +140,7 @@ function corona_get_nav( $theme_location ) {
         $menu_list .= '</button>' ."\n";
 
 		if(get_theme_mod( "corona_site_logo")){
-			$menu_list .= '<a class="navbar-brand" href="' . home_url() . '"><img class="logo" src="' . get_theme_mod( "corona_site_logo") . '"/></a>';
+			$menu_list .= '<a class="navbar-brand" href="' . home_url() . '"><img class="logo" src="' . get_theme_mod( "corona_site_logo") . '"/><span>'.get_bloginfo( 'name' ).'</span></a>';
 		} else{
 			$menu_list .= '<a class="navbar-brand" href="' . home_url() . '">' . get_bloginfo( 'name' ) . '</a>';
 		}
