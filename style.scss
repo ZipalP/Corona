@@ -777,6 +777,11 @@ main{
     .archive .corona-sidebar, .single .corona-sidebar, .page .corona-sidebar{
         padding-left: 0px !important;
     }
+
+    footer .container{
+        padding: 0px;
+        width: auto;
+    }
 }
 
 .corona-normal-page{
@@ -797,11 +802,6 @@ footer{
     background-color: $accent;
     height: 50px;
     color: #fff;
-
-    .container{
-        padding: 0px;
-        width: auto;
-    }
 
     p{
         line-height: 50px;
@@ -836,4 +836,45 @@ footer{
             text-align: center;
         }
     }
+}
+
+// 404 .page
+
+.error404{
+    background-color: $accent !important;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+
+    .site-main{
+        img{
+            width: 30%;
+            float: right;
+        }
+        
+        .info{
+            width: 60%;
+            float: left;
+            
+            h1{
+                font-size: 40px;
+            }
+
+            a{
+                color: #fff;
+
+                &:hover, &:focus, &:active{
+                    color: #fff;
+                    text-decoration: none;
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 800px){
+        img, .info{
+            width: 100% !important;
+        }
+    } 
 }

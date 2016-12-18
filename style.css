@@ -496,7 +496,10 @@ main {
 
 @media (max-width: 767px) {
   .archive .corona-sidebar, .single .corona-sidebar, .page .corona-sidebar {
-    padding-left: 0px !important; } }
+    padding-left: 0px !important; }
+  footer .container {
+    padding: 0px;
+    width: auto; } }
 
 .corona-normal-page .title {
   margin-bottom: 0; }
@@ -509,9 +512,6 @@ footer {
   background-color: #0078D7;
   height: 50px;
   color: #fff; }
-  footer .container {
-    padding: 0px;
-    width: auto; }
   footer p {
     line-height: 50px;
     padding: 0px;
@@ -535,3 +535,26 @@ footer {
       float: none;
       width: 100%;
       text-align: center; } }
+
+.error404 {
+  background-color: #0078D7 !important;
+  position: relative;
+  overflow: hidden;
+  color: #fff; }
+  .error404 .site-main img {
+    width: 30%;
+    float: right; }
+  .error404 .site-main .info {
+    width: 60%;
+    float: left; }
+    .error404 .site-main .info h1 {
+      font-size: 40px; }
+    .error404 .site-main .info a {
+      color: #fff; }
+      .error404 .site-main .info a:hover, .error404 .site-main .info a:focus, .error404 .site-main .info a:active {
+        color: #fff;
+        text-decoration: none;
+        opacity: 0.7; }
+  @media (max-width: 800px) {
+    .error404 img, .error404 .info {
+      width: 100% !important; } }
