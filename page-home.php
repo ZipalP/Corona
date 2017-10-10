@@ -23,7 +23,7 @@ get_header(); ?>
                         ?>
                         
                         <div class="corona-article-list">
-                            <div class="title">Latest Posts</div>
+                            <div class="title"><?php esc_html_e('Latest Posts','corona');?></div>
                             <?php 
 
                                 if ( get_query_var('paged') ) {
@@ -70,7 +70,7 @@ get_header(); ?>
                         </div>
                     </div>
                     <div class="corona-sidebar col-md-8">
-                        <?php echo get_sidebar(); ?>
+                        <?php get_sidebar(); ?>
                     </div>
                 </div>
             </div>

@@ -39,7 +39,7 @@ get_header(); ?>
                         </div>
                     </div>
                     <div class="corona-sidebar col-md-8">
-                        <?php echo get_sidebar(); ?>
+                        <?php get_sidebar(); ?>
                     </div>
                 </div>
             </div>

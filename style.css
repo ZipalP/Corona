@@ -7,8 +7,8 @@ Description: Corona is a simple WordPress theme, inspired by Windows 10's MDL2 d
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: One-column, Two-columns, Right-sidebar, Custom-header, custom-menu, featured-images, custom-logo, blog, custom-colors, custom-background
 Text Domain: corona
-Tags: Windows 10, Windows, MDL, MDL2, Metro, WindowS Phone
 
 */
 /* variables */
@@ -381,6 +381,7 @@ a {
       .single-post-block article header span {
         float: right; }
     .single-post-block article p {
+      clear: both;
       margin-bottom: 10px;
       font-size: 17px;
       line-height: 33px;
@@ -487,6 +488,70 @@ a {
     .single-post-block .comment-respond small {
       font-weight: 600;
       float: right; }
+
+
+      .post-tags { margin-bottom: 10px; margin-top: 25px; }
+      .post-tags span {
+          display: inline-block;
+          margin: 0 7px 0 0;
+          text-transform: uppercase;
+      }
+      .post-tags a { background: #0078D7;
+        display: inline-block;
+        line-height: 16px;
+        white-space: nowrap;
+        font-size: 14px;
+        color:#fff;
+        padding: 3px 7px;
+        margin: 0 5px 2px 0;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        text-transform: capitalize;
+      }
+      .post-tags a:hover { -webkit-transition: background-color 0s;
+        -o-transition: background-color 0s;
+        transition: background-color 0s;}
+
+/*default widget design*/
+.widget_calendar #wp-calendar {    width: 100%;}
+#wp-calendar{ width:100%;text-align:center;}
+#wp-calendar caption, .widget_calendar caption {
+  color: black;
+	text-align: center;
+	font-weight: bold;
+  padding: 5px 10px;
+}
+
+#wp-calendar td, #wp-calendar th {
+    padding: 4px;
+    text-align: center;
+    border: 1px solid #E2E2F3;
+}
+#wp-calendar thead, .wp-calendar thead {background: #f2f2f2; }
+
+/*require stuff*/
+img, .wp-caption {
+	height:auto;
+	max-width:100%;
+	position:relative;
+}
+.sticky {display:block;}
+.bypostauthor {display:block;}
+#sticky-hover {display:block;}
+.wp-caption-text {
+  display: block;
+  font-style: oblique;
+  float: left;
+  font-size: 16px;
+  text-transform: capitalize;
+  padding-bottom: 12px;
+}
+.gallery-caption {
+  display:block;
+}
+.alignright { float: right; }
+.alignleft { float: left; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 
 @media (max-width: 700px) {
   .single-post .site-header {

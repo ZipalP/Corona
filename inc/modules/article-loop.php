@@ -1,27 +1,17 @@
-<article>  
-    <?php 
-        $perma = get_permalink();
-        $title = get_the_title();
-        $author = get_the_author();
-        $authorURL = get_author_posts_url( get_the_author_meta( 'ID' ));
-        $thumb = get_the_post_thumbnail_url($medium);
-        if(!$thumb){
-            $thumb = get_template_directory_uri() . '/inc/assets/missing.png';
-        }
-    ?>
+<article <?php post_class(); ?>>  
+   
 
     <div class="inner">
-        <a title="<?php echo $title; ?>" href="<?php echo $perma; ?>">
-            <div class="thumb" style="background-image: url('<?php echo $thumb; ?>');">
-            </div>
+        <a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>">
+           <?php the_post_thumbnail('medium'); ?>
         </a>
 
         <div class="meta">
             <div class="sub">
-                <a title="<?php echo $title; ?>" href="<?php echo $perma; ?>"><h2><?php echo $title; ?></h2></a>
-                <p class="info"><a title="<?php echo 'Read other articles by ' . $author; ?>" href="<?php echo $authorURL ?>">by <?php echo $author; ?></a>, <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ); ?> ago</p>
+                <a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+                <p class="info"><?php esc_html_e('by ','corona');?><a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>"><?php the_author(); ?></a> <?php the_time( get_option( 'date_format' ) ); ?></p>
             </div>
-            <p><?php echo corona_excerpt(200); ?></p>
+            <p><?php corona_excerpt(200); ?></p>
         </div>
     </div>
 </article>

@@ -31,8 +31,8 @@ get_header(); ?>
  									<?php get_template_part( 'inc/modules/article', 'loop' ); ?>
 								<?php endwhile; ?>
 										<nav class="corona-loop-nav">
-                                            <div class="btn-left"><?php echo get_next_posts_link( 'Older Articles', $latest->max_num_pages ); // display older posts link ?></div>
-                                            <div class="btn-right"><?php echo get_previous_posts_link( 'Newer Articles'); // display newer posts link ?></div>
+                                            <div class="btn-left"><?php esc_html(previous_posts_link(__( 'Newer Article','corona' ))); ?></div>
+                                            <div class="btn-right"><?php esc_html(next_posts_link( __('Older Article', 'corona' ))); ?></div>
                                         </nav>
 								<?php else :
 
@@ -44,7 +44,7 @@ get_header(); ?>
                         </div>
                     </div>
                     <div class="corona-sidebar col-md-8">
-                        <?php echo get_sidebar(); ?>
+                        <?php get_sidebar(); ?>
                     </div>
                 </div>
             </div>

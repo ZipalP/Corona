@@ -16,7 +16,7 @@
 	<footer id="colophon" class="theme-dark site-footer" role="contentinfo">
 		<div class="container">
 			<p>© <?php echo date("Y") . ' ' . get_bloginfo("name"); ?></p>
-			<a href="https://twitter.com/MehediH_" rel="designer">Designed and developed by Mehedi Hassan</a>
+			<a href="https://twitter.com/MehediH_" rel="designer"><?php esc_html_e('Designed and developed by Mehedi Hassan','corona');?></a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

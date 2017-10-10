@@ -108,7 +108,11 @@ function corona_scripts() {
 
 	wp_enqueue_script( 'corona-main', get_template_directory_uri() . '/inc/js/app.js', array( 'jquery' ), true );
 
-	wp_enqueue_script( 'corona-base-js', get_template_directory_uri() . '/inc/js/winstrap.js', array( 'jquery' ), true );
+    wp_enqueue_script( 'corona-base-js', get_template_directory_uri() . '/inc/js/winstrap.js', array( 'jquery' ), true );
+    
+    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+        wp_enqueue_script( 'comment-reply' );
+    }
 	
 }
 
@@ -116,7 +120,12 @@ add_action( 'wp_enqueue_scripts', 'corona_scripts' );
 
 
 function corona_excerpt($limit) {
-    $excerpt = get_the_excerpt($post->ID);
+    if ( is_admin() ) {
+		
+		return $limit;
+    
+    }
+    $excerpt = get_the_excerpt();
     if(strlen($excerpt) > $limit) {
         $excerpt = substr($excerpt, 0, $limit) . '...';
     }
@@ -158,7 +167,7 @@ function corona_get_nav( $theme_location ) {
             if( $menu_item->menu_item_parent == 0 ) {
                  
                 $parent = $menu_item->ID;
-                 
+                $bool = NULL;
                 $menu_array = array();
                 foreach( $menu_items as $submenu ) {
                     if( $submenu->menu_item_parent == $parent ) {
@@ -205,7 +214,7 @@ function corona_get_nav( $theme_location ) {
 
 
 //disable admin bar
-show_admin_bar(false);
+//show_admin_bar(false);  Removal of admin bar is prohibited.
 
 new theme_customizer();
 
@@ -334,22 +343,12 @@ function corona_featured_section(){
 		while ( $query->have_posts() ) {
 			$query->the_post(); ?>
 			<article>  
-				<?php 
-					$perma = get_permalink();
-					$title = get_the_title();
-					$author = get_the_author();
-					$authorURL = get_author_posts_url( get_the_author_meta( 'ID' ));
-					$thumb = get_the_post_thumbnail_url($medium);
-					if(!$thumb){
-						$thumb = get_template_directory_uri() . '/inc/assets/missing.png';
-					}
-				?>
 
-				<a title="<?php echo $title; ?>" href="<?php echo $perma; ?>">
-					<div class="thumb" style="background-image: url('<?php echo $thumb; ?>');"></div>
+				<a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>">
+					<div class="thumb"><?php the_post_thumbnail();?></div>
 					<div class="meta">
-						<h2><?php echo $title; ?></h2>
-						<p class="info">by <?php echo $author; ?>, <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ); ?> ago</p>
+						<h2><?php the_title(); ?></h2>
+						<p class="info"><?php esc_html_e('by','corona');?> <?php the_author(); ?><?php _e('&#x2C;','corona');?> <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ); ?> <?php esc_html_e('ago','corona');?></p>
 					</div>
 					<div class="layer"></div>
 				</a>
@@ -366,7 +365,7 @@ function corona_featured_section(){
 }
 
 function corona_comments( $comment, $args, $depth ){
-    $GLOBALS['comment'] = $comment;
+    $GLOBALS['comment'] = $comment; //	Overriding WordPress globals is prohibited
     switch( $comment->comment_type ) :
         case 'pingback' :
         case 'trackback' : 
@@ -391,7 +390,7 @@ function corona_comments( $comment, $args, $depth ){
                                         ?>
                                     </div>
                                 </span>
-                                <time <?php comment_time( 'c' ); ?>>Posted on <?php comment_date(); ?> at <?php comment_time(); ?></time>
+                                <time <?php comment_time( 'c' ); ?>><?php esc_html_e('Posted on','corona');?> <?php comment_date(); ?> <?php esc_html_e('at','corona');?> <?php comment_time(); ?></time>
                             </div>
                         </div>
                         <?php comment_text(); ?>

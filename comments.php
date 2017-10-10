@@ -21,7 +21,7 @@ if ( post_password_required() ) {
 ?>
 
 <div id="comments" class="comments-area">
-	<div class="title">Comments<span><?php echo get_comments_number(); ?></span></div>
+	<div class="title"><?php esc_html_e('Comments','corona');?><span><?php echo get_comments_number(); ?></span></div>
 	<?php
 	if ( have_comments() ) : ?>
 
@@ -41,7 +41,7 @@ if ( post_password_required() ) {
 			<?php
 				wp_list_comments( array( 
 					'callback' => "corona_comments",
-					'arg1' => $arg1
+					//'arg1' => $arg1
 				) );
 			?>
 		</ol><!-- .comment-list -->

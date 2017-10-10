@@ -17,17 +17,29 @@ get_header(); ?>
                     <div class="col-md-16">
                         <?php
 							while ( have_posts() ) : the_post(); ?>
-								<article>
+								<article <?php post_class(); ?>>
 									<header>
-										<?php
-											$author = get_the_author();
-                                            $authorURL = get_author_posts_url( get_the_author_meta( 'ID' ));
-										?>
+										
 
 										<h1><?php echo get_the_title(); ?></h1>
-										<p><a title="<?php echo 'Read other articles by ' . $author; ?>" href="<?php echo $authorURL ?>">by <?php echo $author; ?></a><span><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ); ?> ago</span></p>
+										<p><?php esc_html_e('by ','corona');?><a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>"><?php the_author(); ?></a><span><?php the_time( get_option( 'date_format' ) ); ?></span></p>
 									</header>
-									<div class="post-container"><?php the_content(); ?></div>
+									<div class="post-container">
+									
+										<?php the_content(); ?>
+										<?php wp_link_pages( array(
+											'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'corona' ),
+											'after'  => '</div>',
+										) );
+										?>
+										<?php
+											if(has_tag()) { ?> 
+												<p class="post-tags">			
+											
+												<?php the_tags('<span>'.('Tags:').'</span> ','','</p>'); ?> <br>
+												
+										<?php } ?>
+									</div>
 								</article>
 
 
@@ -35,7 +47,7 @@ get_header(); ?>
 
 								if(get_theme_mod("corona_config_comments")){ ?>
 									<div id="comments" class="comments-area">
-										<div class="title">Comments</div>
+										<div class="title"><?php esc_html_e('Comments','corona');?></div>
 										<?php if ( comments_open() || get_comments_number() ) :
 											comments_template();
 										endif; ?>
@@ -49,10 +61,10 @@ get_header(); ?>
 								
 							endwhile; // End of the loop.
 						?>
-
+				
                     </div>
                     <div class="corona-sidebar col-md-8">
-                        <?php echo get_sidebar(); ?>
+                        <?php get_sidebar(); ?>
                     </div>
                 </div>
             </div>
